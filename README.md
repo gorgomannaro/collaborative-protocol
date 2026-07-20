@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="cover.png" alt="Collaborative Protocol" width="900">
+</p>
+
 # Collaborative Protocol
 
 A lightweight protocol for more rigorous, context-aware human–AI collaboration.
