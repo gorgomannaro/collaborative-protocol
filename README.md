@@ -2,43 +2,62 @@
   <img src="cover.png" alt="Collaborative Protocol" width="900">
 </p>
 
-# Collaborative Protocol
+# Extended Collaborative Protocol (PCE)
+### Protocollo Collaborativo Esteso
 
-A lightweight protocol for more rigorous, context-aware human–AI collaboration.
+**Current version: 2.2 — Production / operational version**
 
-## Overview
+A practical framework for more rigorous, efficient, context-aware human–AI technical collaboration. The PCE is designed to improve decisions, reduce costly errors and cognitive drift, and lower the cognitive cost of collaboration and context transfer. **It serves the work; it is not a substitute for judgment or a guarantee of correctness.**
 
-The Collaborative Protocol is a behavioral framework designed to improve technical collaboration between humans and Large Language Models.
+## Read the protocol / Leggi il protocollo
 
-Rather than prescribing rigid workflows, it introduces a small set of operational heuristics—called **Rumble Strips**—that help detect common reasoning failures before they become costly mistakes.
+- **[Italiano — PCE v2.2 (authoritative text)](Protocollo_Collaborativo_Esteso_v2.2.md)**
+- **[English — Extended Collaborative Protocol v2.2 (translation)](Collaborative_Protocol.md)**
 
-The protocol focuses on improving collaboration by encouraging participants to:
+**Source of truth:** the Italian v2.2 text is reproduced from the operational document dated as version 2.2. The English text is a translation intended to make the protocol accessible internationally; in case of interpretive differences, consult the Italian original. The specification is distinct from this explanatory README.
 
-- verify context before reasoning;
-- distinguish evidence from inference;
-- make assumptions explicit;
-- keep attention on the real problem instead of its proxies;
-- apply rigor proportionally to risk;
-- periodically audit the collaboration process itself.
+**Testo di riferimento:** il documento italiano v2.2 è riprodotto dall'originale operativo. La versione inglese è una traduzione; in caso di divergenze interpretative prevale il testo italiano. Il README è materiale descrittivo, non parte della specifica.
 
-## Why
+## What it contains
 
-Many failures in AI-assisted engineering are not caused by a lack of intelligence, but by predictable collaboration failures.
+The PCE combines four layers:
 
-The Collaborative Protocol aims to reduce those failures while remaining lightweight enough to be used during everyday technical work.
+1. **Principles:** evidence before conclusions, focus on the actual problem, explicit assumptions, behavioral verification, output-oriented work, and proportional rigor.
+2. **Rumble Strips (RS0–RS6):** lightweight corrective heuristics for context, problem framing, evidence, decision assumptions, behavior, outputs, and the method itself.
+3. **Communication conventions:** transfer the operational delta concisely, without sacrificing accuracy or completeness.
+4. **Operational artifacts:** Bundle, Recap, Knowledge, and Operational Prompt for auditability and continuity across sessions and tools.
 
-## Repository
+**Principle Zero:** the cost of verification should be proportionate to the risk and less than the error it helps prevent. If a rule creates more friction than value, review or simplify it.
 
-This repository contains the current specification of the Collaborative Protocol.
+The protocol also addresses **proportionate model and reasoning-effort selection**: recommend the least costly configuration that preserves the required quality, leaving the final decision to the user.
+
+## Applying it
+
+Read the specification, assess risk and available context, and use a Rumble Strip only when its expected benefit exceeds the interruption cost. The sequence is **Evidence → Conclusion → Decision → Action**. Corrections should be specific and limited; once the drift is addressed or the risk accepted, resume the task.
+
+The PCE is a set of operational heuristics, not a mandatory checklist, universal methodology, or proof of superior reasoning.
+
+## Version history
+
+- **2.2:** compact consolidation of v2.1; removed the Activation section and redundant Foundational Scars; retained the substantive model.
+- **2.1:** bidirectional model/reasoning-effort selection based on task needs and cost.
+- **2.0:** merged the Collaborative and Communication Protocols; introduced the unified operational-artifact structure.
+- **1.3 and earlier:** initial Collaborative Protocol and Rumble Strips (available through [repository history](../../commits/main/Collaborative_Protocol.md)).
+
+The complete v2.x changelog is included in each v2.2 specification. Earlier releases remain accessible in Git history; old activation keywords are **not** current v2.2 guidance.
+
+The previous README documented work with GPT-5.5, GPT-5.6, and Codex during earlier iterations. That historical account is not a claim of independent external validation of the current v2.2 publication.
+
+## Repository contents
+
+| File | Purpose |
+| --- | --- |
+| [Protocollo_Collaborativo_Esteso_v2.2.md](Protocollo_Collaborativo_Esteso_v2.2.md) | Authoritative Italian specification |
+| [Collaborative_Protocol.md](Collaborative_Protocol.md) | English translation, maintaining the original file path for existing links |
+| [README.md](README.md) | Bilingual entry point and version information |
+| [Collaborative_Protocol.png](Collaborative_Protocol.png), [cover.png](cover.png) | Existing visual assets |
+| [LICENSE](LICENSE) | MIT license |
 
 ## License
 
-MIT License.
-
-## How GPT-5.6 and Codex Were Used
-
-The initial version of the Collaborative Protocol was developed using GPT-5.5, before GPT-5.6 became available.
-
-After the release of GPT-5.6, the protocol was subjected to an adversarial review. GPT-5.6 was used as an independent technical reviewer to challenge the protocol's assumptions, identify inconsistencies, search for regressions, and stress-test its internal logic. The protocol was subsequently refined based on this review process.
-
-Codex was used to evaluate the protocol during implementation work on independent software projects. These practical sessions were used to assess whether the protocol improved context preservation, decision quality, and technical collaboration during real development tasks. Feedback from these evaluations informed refinements to the published specification.
+MIT — see [LICENSE](LICENSE).
