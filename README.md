@@ -14,7 +14,7 @@ A practical framework for more rigorous, efficient, context-aware human–AI tec
 - **[Italiano — PCE v2.2 (authoritative text)](Protocollo_Collaborativo_Esteso_v2.2.md)**
 - **[English — Extended Collaborative Protocol v2.2 (translation)](Collaborative_Protocol.md)**
 
-**Source of truth:** the Italian v2.2 text is reproduced from the operational document dated as version 2.2. The English text is a translation intended to make the protocol accessible internationally; in case of interpretive differences, consult the Italian original. The specification is distinct from this explanatory README.
+**Source of truth:** the Italian v2.2 text is reproduced verbatim from the operational v2.2 document. The English text is a translation intended to make the protocol accessible internationally; in case of interpretive differences, consult the Italian original. The specification is distinct from this explanatory README.
 
 **Testo di riferimento:** il documento italiano v2.2 è riprodotto dall'originale operativo. La versione inglese è una traduzione; in caso di divergenze interpretative prevale il testo italiano. Il README è materiale descrittivo, non parte della specifica.
 
@@ -42,7 +42,7 @@ The PCE is a set of operational heuristics, not a mandatory checklist, universal
 - **2.2:** compact consolidation of v2.1; removed the Activation section and redundant Foundational Scars; retained the substantive model.
 - **2.1:** bidirectional model/reasoning-effort selection based on task needs and cost.
 - **2.0:** merged the Collaborative and Communication Protocols; introduced the unified operational-artifact structure.
-- **1.3 and earlier:** initial Collaborative Protocol and Rumble Strips (available through [repository history](../../commits/main/Collaborative_Protocol.md)).
+- **1.3 and earlier:** initial Collaborative Protocol and Rumble Strips (available through [repository history](https://github.com/gorgomannaro/collaborative-protocol/commits/main/Collaborative_Protocol.md)).
 
 The complete v2.x changelog is included in each v2.2 specification. Earlier releases remain accessible in Git history; old activation keywords are **not** current v2.2 guidance.
 
