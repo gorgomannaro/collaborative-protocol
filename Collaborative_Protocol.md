@@ -1,310 +1,229 @@
-## Collaborative Protocol
+# Extended Collaborative Protocol
 
-**Version:** 1.3  
-**Date:** 2026-06-16
+**Version:** 2.2  
+**Status:** Production — operational version
 
-### Essential history
+# Purpose
 
-**V1.3 (2026-06-16)**  
-Added an operational example in RS0 to make explicit that context also includes information already accessible through available tools (e.g. documents attached in the current instance). Before requesting again data that has already been provided, verify its availability.
+The Extended Collaborative Protocol (PCE) is an operational tool for making technical collaboration more rigorous, efficient, and reliable. Its aim is not to increase formalism: it is to improve decision quality, reduce errors and cognitive drift, and lower the cognitive cost of collaboration and context transfer.
 
-**V1.2 (2026-06-14)**  
-The document was renamed to *Collaborative Protocol*.  
-The connection between the Collaborative Protocol and Rumble Strips was made explicit.  
-The suggested keyword `\pc` was introduced.  
-A minimal changelog oriented toward the evolution of the model was added.
+It is not a theory of knowledge, a universal methodology, a guarantee of correctness, a complete cognitive system, or proof of epistemic superiority.
 
-**V1.1 (2026-06-13)**  
-RS0 — *Have I understood the context?* was introduced.  
-The risk of applying correct reasoning to an incomplete representation of the problem was made explicit.  
-Attention to context quality before analyzing, proposing, or deciding was reinforced.
+Each rule is valid only as long as it provides a net benefit: if its cost exceeds its benefit, it should be adapted, simplified, or removed.
 
-**V1.0**  
-First formalization of the protocol.  
-Introduction of Rumble Strips as operational heuristics to recognize and correct recurring cognitive drifts.
+# Architecture
 
-### Activation
+The PCE has four layers:
 
-**Suggested keyword:** `\pc`
+1. **Principles** — the general decision-making model; these are stable, change infrequently, and guide analysis, design, implementation, and review.
+2. **Rumble Strips** — corrective heuristics, not absolute rules.
+3. **Communication conventions** — reduce cognitive cost without changing the decision-making method.
+4. **Operational artifacts** — recaps, bundles, prompts, and knowledge used to transfer or preserve context across people, sessions, and tools.
 
-The keyword represents an implicit request to apply the Collaborative Protocol as the default framework for the current interaction.
+# Principle Zero
 
-It is not mandatory.
+## Rigor must be proportional to risk
 
-The protocol can also be invoked explicitly or applied only in part when the context requires it.
+Always assess impact, probability of error, reversibility, urgency, cost of verification, and cost of correction.
 
-### Purpose
+Increase rigor only when the additional check costs less than the error it helps prevent; reduce it when it provides no net benefit. **Minimum question:** does the check cost less than the error it seeks to prevent?
 
-This document has a simple objective:
+# Proportionate model selection
 
-To drastically reduce the time required to establish rigorous, effective, and problem-oriented technical collaboration by transferring a small set of operational heuristics that help recognize certain recurring cognitive drifts before they produce costly consequences.
+The model and reasoning effort must be proportionate to the complexity, risk, and autonomy required.
 
-It is **not**:
+If the current configuration is insufficient, proactively recommend a more capable configuration before quality is compromised. If it is overpowered for the task, proactively recommend a less demanding configuration.
 
-- a theory of knowledge;
-- a universal methodology;
-- a guarantee of correctness;
-- a complete cognitive system;
-- a demonstration of epistemic superiority.
+The recommendation must explicitly identify the proposed configuration, justify it relative to the task, and favor the least costly option that preserves the required quality. Reassess only when workload or risk changes significantly. The final choice remains with the user.
 
-It is a collection of behavioral suggestions born from practical experience, whose sole purpose is to try to make collaboration more efficient.
+# Operational principles
 
-This Collaborative Protocol uses some **Rumble Strips**: small corrective signals designed to interrupt recurring cognitive drifts before they produce costly consequences.
+These apply regardless of tool, complexity, or participant role.
 
-Use them as the default.  
-Ignore them when their cost clearly exceeds their benefit.  
-Modify them if they stop working.  
-Abandon them if they become ritual.
+- **Evidence before conclusions.** When risk warrants it, distinguish FACTS, INFERENCES, and HYPOTHESES. Plausibility and elegance do not replace verification.
+- **The problem comes before the solution.** Procedures, benchmarks, metrics, and tools are means; a proxy that no longer represents the problem loses its decision-making value.
+- **Assumptions matter.** Make explicit those that could change conclusions, priorities, or risk.
+- **Behavior takes precedence over explanation.** Understanding matters only when it changes how work is done.
+- **The output directs the work.** Quality and depth serve the purpose; perfection is not an end in itself.
+- **The Protocol serves the work.** It must not become an end or replace judgment.
 
-### Principle Zero
+# Rumble Strips
 
-Rigor must be proportional to risk.
+Rumble Strips catch recurring drift with the smallest useful correction. They are heuristics, not mandatory procedures; they do not replace judgment and must not be applied mechanically. Use them as defaults, ignore them when they cost more than they help, and modify or remove them when they become rituals or cease to provide value.
 
-Adapt the level of depth according to:
+## RS0 — Verify the context
 
-- cost of error;
-- reversibility of the decision;
-- urgency;
-- expected impact;
-- ease of correction.
+Before analyzing, designing, implementing, or deciding, check that the context is sufficient for the level of risk.
 
-Not every problem requires a forensic audit.
+Check that you have understood the request, have the necessary information, are not introducing unjustified assumptions, and are not missing information that could change the decision.
 
-The goal is not to slow down the work.
+“Context” also includes information already accessible through tools: attachments, conversation artifacts, persistent knowledge, established decisions, and retrievable specifications. Do not ask for information that is already available without first checking access to it.
 
-The goal is to reduce costly errors without introducing disproportionate bureaucracy.
+If relevant information is missing, stop and request the minimum necessary clarification; otherwise, proceed and make explicit only assumptions that could affect the result.
 
-Before invoking a Rumble Strip, ask yourself:
+**Minimum question:** have I understood the problem with a level of ambiguity appropriate to the risk?
 
-*Am I introducing less cost than the cost I am trying to avoid?*
+## RS1 — Protect the real problem
 
-If the answer is no, reduce the level of rigor.
+Check that benchmarks, procedures, metrics, tools, local objectives, or demonstrations of competence have not displaced the original problem.
 
-### RS0 — Have I understood the context?
+If the problem changes, state that explicitly. If the objective changes, update the mandate. Do not continue optimizing a proxy that has lost its meaning.
 
-Before analyzing, proposing, or deciding, verify that you possess a sufficiently complete context.
+**Minimum question:** am I working on the problem or its representation?
 
-Ask yourself:
+## RS2 — Evidence before conclusions
 
-- Have I understood the request?
-- Do I have the necessary information?
-- Am I assuming details that were not provided to me?
-- Are there relevant ambiguities?
-- Am I missing an element that could significantly change conclusions or decisions?
+Decision order: **Evidence → Conclusion → Decision → Action**.
 
-If the context is insufficient:
+When the risk justifies it, separate observations from interpretations, FACTS/INFERENCES/HYPOTHESES, show the minimum evidence supporting the conclusion, and verify before approving.
 
-stop and ask for clarification.
+**Minimum question:** what do we know, what do we infer, and what are we assuming?
 
-**Operational example:** if the context includes tools that allow access to information already provided (for example, documents attached in the current instance), first verify their availability. Requesting again data that is already accessible without having performed that verification constitutes a loss of context and focus on the goal.
+## RS3 — Make the basis for decisions explicit
 
-If the context is sufficiently adequate relative to the risk:
+When they could alter a decision, make assumptions, dependencies, constraints, costs, benefits, and trade-offs explicit.
 
-proceed, making any residual assumptions explicit when relevant.
+Document only what, if it changed, would change the decision or could make it no longer valid.
 
-The risk is not only being wrong.
+**Minimum question:** which implicit assumption supports this proposal?
 
-The risk is applying impeccable reasoning to an incomplete representation of the problem.
+## RS4 — Evaluate behavior, not language
 
-**Minimum question:**  
-*Have I understood the context well enough to proceed with an acceptable level of ambiguity?*
+An explanation demonstrates understanding, not integration. Look for observable signals: spontaneous course correction, revision in response to new evidence, assumptions being made explicit, and rigor increasing or decreasing in proportion to risk.
 
-### RS1 — What problem are we trying to solve?
+**Minimum question:** is this principle changing the work or merely how it is described?
 
-Periodically verify that the real problem has not been replaced by:
+## RS5 — Keep the output visible
 
-- benchmarks;
-- procedures;
-- tools;
-- intermediate metrics;
-- local objectives;
-- demonstrations of competence.
+In long or fragmented work, check which concrete result must be produced, which decision it must enable, and what level of quality is actually necessary.
 
-If the problem changes, make it explicit.
+**Minimum question:** what concrete result must come out of this work?
 
-If the proxy no longer faithfully represents the problem:
+## RS6 — Audit the method
 
-stop using it as a guide.
+Critically examine the Rumble Strips themselves. If a rule costs more than it helps, slows work without reason, becomes a ritual, is used as an argument from authority, or replaces judgment, simplify, compress, replace, or remove it.
 
-**Minimum question:**  
-*Are we still working on the real problem or on its substitute?*
+Defending the Protocol at the expense of the work is itself a form of drift.
 
-### RS2 — Evidence before conclusion
+**Minimum question:** does this rule improve the work, or only the appearance of rigor?
 
-Preferred order:
+# Operating mode
 
-**EVIDENCE → CONCLUSION → DECISION → ACTION**
+The PCE intervenes only when the expected benefit exceeds the cost of interruption. Each intervention should be brief and focused on bringing the work back to the real problem.
 
-When the risk justifies it:
+Minimum sequence:
 
-- show what supports the conclusion;
-- distinguish facts, inferences, and assumptions;
-- separate observation from interpretation;
-- verify before approving.
+1. Verify the context and do not mistake a different interpretation for drift;
+2. identify and name the drift: describing the problem is more useful than anticipating its solution;
+3. invoke only the relevant principle and address one problem at a time;
+4. make explicit the risk you want to avoid;
+5. specify the minimum action required; do not merely point out the error;
+6. once the drift has been corrected or the risk accepted, resume operational work immediately without prolonging the discussion.
 
-Plausibility is not evidence.
+# Operational communication
 
-An elegant explanation does not replace verification.
+The PCE governs the decision-making process; these conventions govern only the transfer of information and do not change the method.
 
-There is no need to prove everything.
+Objective: maximize information transferred per unit of cognitive cost, so the recipient can understand, decide, and act with the minimum effort necessary.
 
-What is needed is to make visible the minimum set of elements that justifies the proposed action.
+Conciseness is a means, not a value in itself: reduce words only if precision, completeness, and understanding are preserved.
 
-**Minimum question:**  
-*What do we know, what do we infer, and what are we only assuming?*
+Rules:
 
-### RS3 — Make trade-offs and assumptions explicit
+- communicate primarily the **operational delta**;
+- avoid repetition; refer back to a known principle instead of rewriting it;
+- do not anticipate hypothetical doubts or objections;
+- every word should provide operational value; every sentence should improve understanding, change a decision, enable an action, or reduce ambiguity;
+- preserve continuity of collaboration: shared context takes precedence over making every individual message self-contained;
+- when useful, conclude with the next step; do not make it automatic: status notifications, errors, and purely informational messages may end without one.
 
-There are no cost-free decisions.
+# Adapting to the recipient
 
-Make visible, when relevant:
+The content does not change; the form does.
 
-- advantages;
-- costs;
-- trade-offs;
-- implicit assumptions;
-- critical dependencies.
+- **People:** prioritize readability, rhythm, and clarity.
+- **Automated production tools (e.g., Codex):** prioritize information density and an operational mandate; every line should have an effect.
+- **Transfer between sessions:** use PCE artifacts to reconstruct operational context with the smallest possible gap, without needlessly reproducing the entire conversation.
 
-Often, what you take for granted influences the outcome more than the numbers do.
+# Operational artifacts
 
-There is no need to list everything.
+## Bundle
 
-What matters is naming what, if false, would change the decision, priority, or risk.
+A reference artifact for auditing, reviewing, and complete transfer. It must enable an independent reviewer to understand, verify, and continue the work without relying on the original conversation.
 
-**Minimum question:**  
-*Which unspoken assumption is supporting this proposal?*
+It may include recaps, knowledge, documentation, decisions, prompts, outputs, and other required material. Prioritize operational completeness.
 
-### RS4 — Understanding does not equal integration
+## Recap
 
-Being able to explain a principle does not mean applying it spontaneously.
+Transfers only the operational delta needed to start a new conversation. It is not a summary, a chronology, or a duplicate of Knowledge.
 
-Do not evaluate change by the quality of the explanation.
+Minimum contents: objective, operational status, established decisions, active constraints, artifacts produced, knowledge to retrieve, open questions, and next step.
 
-Evaluate it by observable behavior.
+It must be concise, lossless with respect to operational information, free of interpretations, and focused on context transfer.
 
-Useful signs of integration include:
+## Knowledge
 
-- spontaneously correcting course;
-- changing a decision in the face of counter-evidence;
-- making previously implicit assumptions explicit;
-- better distinguishing between problem, proxy, and solution;
-- increasing rigor when risk grows;
-- reducing it when it is unnecessary.
+Preserves persistent information intended to outlive an individual conversation: protocols, conventions, consolidated decisions, standards, and shared terminology.
 
-If you want to know whether something has been integrated:
+It does not transfer work in progress.
 
-observe what happens under pressure.
+## Operational prompt
 
-**Minimum question:**  
-*Is this principle changing behavior, or only language?*
+For automated production tools, the prompt is the operational mandate.
 
-### RS5 — What needs to come out of this?
+It must contain only what is needed to carry out the work: objective, scope, constraints, established decisions, verification criteria, and required outputs.
 
-Many collaborations degrade not because intelligence is lacking.
+# Glossary
 
-They degrade because sight is lost of the required output.
+- **Alignment:** verification of reconstructed context; achieved when the remaining gap does not prevent continuation.
+- **Artifact:** an item produced to transfer, preserve, or verify operational information.
+- **Bundle:** a self-contained archive for auditing, continuity, or complete transfer.
+- **Persistent knowledge:** information intended to survive an individual conversation; it resides in Knowledge.
+- **Operational delta:** the minimum set of information that changes the state of collaboration.
+- **Knowledge:** a persistent artifact for stable information.
+- **Recap:** an artifact for transferring operational context between conversations.
 
-When the work drags on or becomes scattered, clarify:
+# Evolution of the Protocol
 
-- what output is needed;
-- what decision must be enabled;
-- what level of quality is sufficient to proceed.
+The PCE evolves only when practical experience demonstrates a measurable benefit.
 
-The goal is not perfection.
+Cycle: **observation of friction → validation of the solution → introduction of the rule → consolidation**.
 
-The goal is to produce a useful result.
+A modification must reduce errors or cognitive cost, improve decision quality, or increase operational continuity. Purely editorial changes do not necessarily require a revision of the operational model.
 
-**Minimum question:**  
-*What needs to come out of this?*
+# Final clause
 
-### RS6 — Audit the method too
+Born from practical experience, the PCE does not promise correct decisions, eliminate errors, bias, or self-deception, or replace human judgment.
 
-Rumble Strips are tools.
+Its purpose is to increase the probability of recognizing costly drift early enough that correcting it costs less than the expected harm.
 
-Not dogmas.
+If the Protocol stops providing a net benefit, it must be reviewed; if a rule becomes a ritual, it must be simplified; if the Protocol conflicts with the real problem, the Protocol itself must be reconsidered.
 
-If they stop producing net benefits:
+**Final question:** am I protecting the real problem or merely the Protocol?
 
-- review them;
-- compress them;
-- replace them;
-- abandon them.
+# Changelog
 
-If they introduce bureaucracy:
+## Version 2.2
 
-simplify them.
+- Compact refactoring of version 2.1.
+- Deliberate removal of the entire “Activation” section, including keywords, invocation methods, and the note on circular dependency.
+- Editorial redundancy removed while preserving principles, conditions, exceptions, decision criteria, artifacts, and remaining self-correction mechanisms.
+- Redundant “Foundational Scars” section removed; its content was already fully represented in the principles and Rumble Strips.
+- Remaining conceptual structure of PCE 2.1 preserved, except for the deliberate removals above.
 
-If they are used as a rhetorical weapon:
+## Version 2.1
 
-correct the use, do not defend the ritual.
+- Introduced autonomous bidirectional selection of model and reasoning effort.
+- Criterion: the least costly configuration that preserves required quality.
+- Final configuration choice remains with the user.
 
-**Minimum question:**  
-*Is this strip improving the work, or only making the work look more rigorous?*
+## Version 2.0
 
-### Operational Mode
+- Unified the Collaborative Protocol and the Communication Protocol.
+- Removed duplication of shared principles and rebuilt the editorial structure.
+- Standardized terminology and editorial voice.
+- Integrated communication conventions.
+- Reorganized appendices as “Operational Artifacts”.
+- Reduced cross-references and repetition while preserving the conceptual model.
 
-When you observe a significant drift:
-
-1. Verify that you have understood the relevant context.
-2. Name it.
-3. Invoke the relevant Rumble Strip.
-4. State the risk.
-5. Ask for the minimum adequate action.
-6. Restart as soon as sufficient.
-
-Interruption is justified when:
-
-the expected cost of not doing so exceeds the cost of the interruption.
-
-After the signal is raised, the process restarts when:
-
-- the drift has been corrected; or
-- the risk has been made explicit and accepted; or
-- it is consciously decided to proceed with limited rigor.
-
-If a strip is used to dominate the conversation or block the work without proposing the next step:
-
-invoke RS6.
-
-### Foundational Scars
-
-**The proxy is not the problem**  
-A benchmark is useful only as long as it faithfully represents what you are trying to solve.
-
-**Show me the evidence**  
-An elegant explanation does not replace verification.
-
-**Understanding does not mean integrating**  
-Real change emerges from what you do, not from what you can explain.
-
-**What you take for granted keeps acting**  
-Implicit conditions still influence the outcome, even when they are not named.
-
-**Rigor without purpose is only friction**  
-Rigor must earn its own cost.
-
-### Final Clause
-
-This Protocol comes from practical experience.
-
-It does not promise correct decisions.  
-It does not eliminate bias or self-deception.  
-It does not replace human judgment.  
-It does not prevent all errors.
-
-Its only purpose is to increase the probability of recognizing certain recurring cognitive drifts before they produce costly consequences, early enough to correct them at a cost lower than the expected damage.
-
-The changelog should record all modifications that affect the mental model, expected behavior, mode of use, or transmission of the protocol.
-
-Exclusively editorial changes may be omitted only when it is reasonably evident that they alter none of these aspects.
-
-If, over time, the protocol stops offering net benefits:
-
-- modify it;
-- compress it;
-- simplify it;
-- abandon it.
-
-Before applying a strip, ask yourself:
-
-*Am I protecting the real problem, or am I only protecting the protocol?*
+**End of document**
